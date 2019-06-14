@@ -4,7 +4,7 @@ import FilterLink from '../containers/FilterLink';
 
 const Footer = () => (
   <div>
-    <span>Show: </span>
+    <span>显示: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       所有
     </FilterLink>
