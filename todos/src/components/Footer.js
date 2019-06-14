@@ -9,7 +9,7 @@ const Footer = () => (
       所有
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
-      待办
+      待ok办
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
       已完成
