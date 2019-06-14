@@ -1,0 +1,23 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "script"
+    },
+    "rules": {
+        "indent": [ "warn", 4 ],
+        "quotes": [ "warn", "single" ],
+        "semi": [ "error", "always" ],
+        "camelcase": "error",
+        "no-console": "warn",
+        "no-unused-vars": "warn",
+        "eqeqeq": 2,
+        "lines-around-comment": ["error", { "beforeBlockComment": true }],
+        "new-cap": ["error", { "newIsCap": true, "capIsNew": false}],
+        "no-multiple-empty-lines": ["error", {"max": 1}],
+        "prefer-template": "error"
+    }
+}

@@ -1,0 +1,4 @@
+# 忽略 /node_modules/* 和 /bower_components/* 中的文件
+# 忽略files文件夹
+files/*
+jsdoc/* 

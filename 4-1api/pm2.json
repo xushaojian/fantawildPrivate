@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "name": "4-1Api",
+      "script": "./app.js",
+      "cwd": "./",
+      "watch": true, 
+      "ignore_watch": [
+        "node_modules",
+        "logs",
+        "files",
+        "readme.md",
+        "readme2.md"
+      ],
+      "instances": 4,
+      "error_file": "./logs/pm2Err.log",
+      "out_file": "./logs/pm2Out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

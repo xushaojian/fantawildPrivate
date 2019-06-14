@@ -1,0 +1,17 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source":{
+        "include":["./controllers"],
+        "exclude":["./node_modules/"],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts":{
+        "template":"node_modules/docdash",
+        "encoding":"utf8",
+        "destination":"./jsdoc/",
+        "readme":"readme.md"
+    }
+}
