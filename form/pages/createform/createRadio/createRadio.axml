@@ -1,0 +1,35 @@
+<view class="page">
+    <view class="page-section">
+        <view class="page-section-title">标题(必填)</view>
+        <view class="page-section-demo">
+            <view class="search-outer">
+                <input class="search-input" onInput="bindKeyInput" placeholder="请输入单选标题文字" value="{{title}}" />
+            </view>
+        </view>
+    </view>
+
+    <view class="page-section">
+        <view class="page-section-title">描述(选填)</view>
+        <view class="page-section-demo">
+                <textarea class="input" style="height:100px" maxlength=-1  onInput="bindKeyTextarea" placeholder="请输入描述文字" value="{{description}}"/>
+        </view>
+    </view>
+
+   <view class="page-section">
+        <view class="page-section-title">选项(若非必填则需加"放弃选择"一项)</view>
+        <view class="page-section-demo">
+            <radio-group class="radio-group" onChange="radioChange">
+                <view class="radio" a:for="{{radioData}}">
+                      <view onTap="delete" data-index="{{index}}" style="margin-right:10rpx;margin-top:12rpx"><icon type="clear" size="20" color="red"/> </view>
+                      <input placeholder="请输入选项" value="{{item}}"  class="input" data-index="{{index}}" onInput="bindRadioText"/>
+                </view>
+            </radio-group>
+        </view>
+        <view class="add-view">
+            <view onTap="addRadio">添加新选项</view>  
+        </view>
+    </view>
+    
+    <button type="primary" onTap="sure">确定</button>
+    <button type="warn" onTap="clear">清空</button>
+</view>

@@ -1,0 +1,9 @@
+.text-color-able {
+    color: #108EE9;
+    font-size: 14px;
+}
+
+.chart-roll{
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,26 @@
+.container-div{
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+.touch{
+    overflow: scroll;
+    -webkit-overflow-scrolling : touch;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    background-color: #f4f4f4
+}
+
+th{
+    width: 33%;
+    height: 30px;
+   background-color: #FFF;
+}
+
+td{
+    height: 25px;
+    background-color: #FFF
+}

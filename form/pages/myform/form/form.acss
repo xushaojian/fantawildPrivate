@@ -1,0 +1,83 @@
+page {
+    background-image: url(/image/bc.jpg);
+}
+
+.doc {
+    padding: 30rpx;
+}
+
+.comconents {
+    padding: 10rpx 0rpx;
+}
+
+.title-class {
+    width: 100%;
+    font-size: 18px;
+    color: #8B2500;
+    margin-top: 20rpx;
+}
+
+.postion-left {
+    text-align: left;
+}
+
+.postion-center {
+    text-align: center;
+}
+
+.postion-right {
+    text-align: right;
+}
+
+.margin-top20 {
+    margin-top: 30rpx;
+}
+
+.description {
+    font-size: 14px;
+    color: #F2F2F2;
+    margin: 10px 0px 10px 0px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.group{
+    margin-left: 10px;
+}
+
+.radio {
+    display: block;
+    margin-bottom: 20rpx;
+    color: white;
+
+}
+
+.radio-text {
+    line-height: 1.8;
+}
+
+.windows {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #108ee9;
+}
+
+.content {
+    background-color: #108ee9;
+    color: white;
+    margin: auto;
+    height: 300px;
+    padding: 0 20px;
+}
+
+.header {
+    padding: 5px;
+    background: #ffa550;
+}
+
+.close-button {
+    float: right;
+    font-size: 40rpx;
+}

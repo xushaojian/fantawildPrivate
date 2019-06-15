@@ -13,7 +13,7 @@ const Footer = () => (
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
       已完成
-    </FilterLink>
+    </FilterLink> 
   </div>
 )
 

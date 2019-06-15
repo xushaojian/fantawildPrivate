@@ -1,0 +1,37 @@
+<view>
+    <image src="/image/top.png" style="height:100px;width:100%"/>
+    <view class="doc">
+
+        <view a:for="{{components}}" >
+            <!-- title -->
+            <view a:if="{{item.type === 'title'}}" >
+                <view  class="title-class postion-{{item.position}}"> {{item.title}} </view>
+                <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+            </view>
+
+            <!-- radio -->
+            <view a:if="{{item.type === 'radio'}}">
+                <view a:if="{{item.title != ''}}" class="title-class">{{item.title}} </view>
+                <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+                <radio-group class="group" onChange="radioChange" data-arrIndex="{{index}}">
+                    <label class="radio" a:for="{{item.radioData}}" a:for-index="radioIndex" a:for-item="radioItem">
+                        <radio value="{{radioItem}}" />{{radioItem}}
+                    </label>
+                </radio-group>
+            </view>
+
+            <!-- checkbox -->
+            <view a:if="{{item.type === 'checkbox'}}">
+                <view a:if="{{item.title != ''}}" class="title-class">{{item.title}} </view>
+                <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+                <checkbox-group class="group" onChange="checkboxChange" data-arrIndex="{{index}}">
+                    <label class="radio" a:for="{{item.checkboxData}}" a:for-index="checkboxIndex" a:for-item="checkboxItem">
+                        <checkbox value="{{checkboxItem}}"/>{{checkboxItem}}
+                    </label>
+                </checkbox-group>
+            </view>
+
+        </view>
+        <button type="primary" onTap="submit" style="margin-top:50px">提交</button>
+    </view>
+</view>

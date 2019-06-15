@@ -1,0 +1,110 @@
+<view >
+    <scroll-view scroll-y="{{true}}" style="height: {{height}}px;">
+        <image src="/image/top.png" style="height:100px;width:100%"/>
+        <view class="content">
+         <block a:for="{{components}}" >
+             <!-- title -->
+             <view a:if="{{item.type === 'title'}}" class="margin-top20 {{item.border}}">
+                <view onTap="onTapComponent" data-index="{{index}}">
+                    <view a:if="{{item.title != ''}}" class="title-class postion-{{item.position}}">{{item.title}} </view>
+                    <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+                </view>
+                <view a:if="{{item.border==''?false:true}}" class="tool" >
+                        <view onTap="edit" data-index="{{index}}">编辑</view>
+                        <view onTap="top" data-index="{{index}}">上移</view>
+                        <view onTap="down" data-index="{{index}}">下移</view>
+                        <view onTap="del" data-index="{{index}}">删除</view>
+                </view>
+            </view>
+
+            <!-- radio -->
+            <view a:if="{{item.type === 'radio'}}" class="margin-top20 {{item.border}}" >
+                <view onTap="onTapComponent" data-index="{{index}}">
+                    <view a:if="{{item.title != ''}}" class="title-class">{{item.title}} </view>
+                    <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+                    <radio-group class="group" onChange="radioChange">
+                        <label class="radio" a:for="{{item.radioData}}" a:for-index="radioIndex" a:for-item="radioItem">
+                            <radio value="{{radioIndex}}" disabled="true"/>{{radioItem}}
+                        </label>
+                    </radio-group>
+                </view>
+                <view a:if="{{item.border==''?false:true}}" class="tool" >
+                    <view onTap="edit" data-index="{{index}}">编辑</view>
+                    <view onTap="top" data-index="{{index}}">上移</view>
+                    <view onTap="down" data-index="{{index}}">下移</view>
+                    <view onTap="del" data-index="{{index}}">删除</view>
+                </view>
+            </view>
+
+            <!-- checkbox -->
+            <view a:if="{{item.type === 'checkbox'}}" class="margin-top20 {{item.border}}" >
+                <view onTap="onTapComponent" data-index="{{index}}">
+                    <view a:if="{{item.title != ''}}" class="title-class">{{item.title}} </view>
+                    <view a:if="{{item.description != ''}}" class="description">{{item.description}} </view>
+                    <checkbox-group class="group" onChange="checkboxChange">
+                        <label class="radio" a:for="{{item.checkboxData}}" a:for-index="checkboxIndex" a:for-item="checkboxItem">
+                            <checkbox value="{{checkboxIndex}}" disabled="true" />
+                            <text class="checkbox-text">{{checkboxItem}}</text>
+                        </label>
+                    </checkbox-group>
+                </view>
+                <view a:if="{{item.border==''?false:true}}" class="tool" >
+                    <view onTap="edit" data-index="{{index}}">编辑</view>
+                    <view onTap="top" data-index="{{index}}">上移</view>
+                    <view onTap="down" data-index="{{index}}">下移</view>
+                    <view onTap="del" data-index="{{index}}">删除</view>
+                </view>
+            </view>
+        </block>
+        </view>
+    </scroll-view>
+
+    <view class="page-section-btns-my">
+        <view onTap="componentList" style="width:33.33%">
+            <view class="item">
+                <image src="/image/components.png" style="height:36rpx;width:36rpx;"/>
+                <view style="margin-top:10rpx;">添加组件</view>
+            </view>
+        </view>
+        <view onTap="formConfig" style="width:33.33%">
+            <view class="item">
+                <image src="/image/config.png" style="height:40rpx;width:40rpx;"/>
+                <view style="margin-top:10rpx;">表单配置</view>
+            </view>
+        </view>
+        <view onTap="release" style="width:33.34%">
+            <view class="item">
+                <image src="/image/release.png" style="height:36rpx;width:36rpx;"/>
+                <view style="margin-top:10rpx;">发布</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="windows" style="{{display:alert}}">
+        <view onTap="closeAlert" class="close-button">
+            <image  mode="aspectFit" src="/image/close.png" style="width:48rpx;height:48rpx" />
+        </view>
+        <view class="container">
+            <template is="grid" data="{{...arr}}" />
+        </view>
+    </view>
+</view>
+
+<template name="grid">
+    <view class="grid" key="grid">
+        <view a:for="{{list}}" class="grid-item" onTap="{{item.onItemTap}}" data-index="{{index}}">
+            <view class="grid-item-wrapper">
+                <image src="{{item.icon}}" class="grid-icon" mode="aspectFit" />
+                <text class="grid-text">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+
+
+
+
+
+
+

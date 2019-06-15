@@ -1,0 +1,22 @@
+<view >
+    <block a:for="{{list}}">
+        <view class="box">
+            <view class="title">{{list[index].time}}</view>
+            <view class="row">
+                <view class="col">姓名 </view>
+                <view class="col">{{list[index].user_name}} </view>
+            </view>
+            <block a:for="{{list[index].result}}" a:for-item="item">
+                <view class="row" a:if="{{item.type == 'radio'}}">
+                    <view class="col">{{item.title}} </view>
+                    <view class="col">{{item.value}} </view>
+                </view>
+                <view class="row" a:if="{{item.type == 'checkbox'}}">
+                    <view class="col">{{item.title}} </view>
+                    <view class="col">{{item.value.join(' , ')}} </view>
+                </view>
+
+            </block>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,30 @@
+@import '~antd/lib/style/themes/default.less';
+
+.standardTable {
+  :global {
+    .ant-table-pagination {
+      margin-top: 24px;
+    }
+    .ant-table-thead>tr>th{
+      font-size:15px;
+      font-weight:600;
+      color: #333;
+      background: #fff;
+    }
+    .ant-table-tbody>tr>td{
+       cursor: pointer;
+       border-bottom: 1px dotted #e1e1e1;
+       a{
+        color:rgba(0,0,0,0.6);
+       }
+    }
+    .ant-table-tbody>tr:hover>td{
+       background: #fff2cc !important
+   }
+   
+  }
+
+  .tableAlert {
+    margin-bottom: 16px;
+  }
+}

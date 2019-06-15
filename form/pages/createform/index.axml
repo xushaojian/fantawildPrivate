@@ -1,0 +1,14 @@
+<view class="container">
+  <template is="grid" data="{{...arr}}" />
+</view>
+
+<template name="grid">
+    <view class="grid" key="grid">
+        <view a:for="{{list}}" class="grid-item" onTap="{{onItemTap}}" data-index="{{index}}">
+            <view class="grid-item-wrapper">
+                <image src="{{item.icon}}" class="grid-icon" mode="aspectFit" />
+                <text class="grid-text">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+</template>

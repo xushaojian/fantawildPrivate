@@ -1,0 +1,15 @@
+.exp-field-details{
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+html {
+  line-height: 1.40;
+}
+
+/* 取消结果控件底线 */
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  html:not([data-scale]) .am-result::after {
+    height: 0PX;
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/myform/index",
+    "pages/createform/index",
+    "pages/my/index",
+    "pages/createform/newform/newform",
+    "pages/createform/testform/testform",
+    "pages/createform/createTitle/createTitle",
+    "pages/createform/createRadio/createRadio",
+    "pages/createform/formConfig/formConfig",
+    "pages/myform/form/form",
+    "pages/myform/replyData/replyData",
+    "pages/myform/QRCode/QRCode",
+    "pages/myform/replyStatistics/replyStatistics",
+    "pages/my/help/help",
+    "pages/my/about/about",
+    "pages/createform/createCheckbox/createCheckbox",
+    "pages/myform/deminder/deminder"
+  ],
+  "window": {
+    "defaultTitle": "活动",
+    "titleBarColor": "#108ee9",
+    "pullRefresh": true
+  },
+  "tabBar": {
+    "textColor": "#dddddd",
+    "selectedColor": "#ffa550",
+    "backgroundColor": "#108ee9",
+    "items": [
+      {
+        "pagePath": "pages/myform/index",
+        "name": "我的表单",
+        "icon": "image/myform.png",
+        "activeIcon": "image/myformactive.png"
+      },
+      {
+        "pagePath": "pages/createform/index",
+        "name": "创建表单",
+        "icon": "image/createform.png",
+        "activeIcon": "image/createformactive.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "name": "我",
+        "icon": "image/my.png",
+        "activeIcon": "image/myactive.png"
+      }
+    ]
+  },
+  "debug": true
+}

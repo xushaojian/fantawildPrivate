@@ -1,0 +1,36 @@
+<view class="page">
+
+    <view class="page-section">
+        <view class="page-section-title">标题(必填)</view>
+        <view class="page-section-demo">
+            <view class="search-outer">
+                <input class="search-input" onInput="bindKeyInput" placeholder="输入标题文字" value="{{title}}" />
+            </view>
+        </view>
+    </view>
+
+   <view class="page-section">
+        <view class="page-section-title">标题位置</view>
+        <view class="page-section-demo">
+            <radio-group class="radio-group" onChange="radioChange">
+                <label class="radio" a:for="{{items}}">
+                    <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+                </label>
+            </radio-group>
+        </view>
+    </view>
+
+    <view class="page-section">
+        <view class="page-section-title">描述(选填)</view>
+        <view class="page-section-demo">
+            <textarea style="height:100px" maxlength=-1  onInput="bindKeyTextarea" placeholder="输入描述文字" value="{{description}}"/>
+        </view>
+    </view>
+
+    <button type="primary" onTap="sure">确定</button>
+    <button type="warn" onTap="clear">清空</button>
+
+    
+
+
+</view>

@@ -1,0 +1,158 @@
+@import '~antd/lib/style/themes/default.less';
+
+.header {
+  height: 54px;
+  padding: 0 12px 0 0;
+  // background:#3bb19c;
+  background: #000;
+  // background: #fff;
+  // box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: relative;
+  :global{
+    .ant-menu-dark, .ant-menu-dark .ant-menu-sub{
+      background: #282b2f;
+    }
+    
+    .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
+      font-weight: 700;
+      background: rgba(0,0,0,0.5);
+      opacity: 1;
+      line-height: 52px;
+    }
+    .ant-menu-item{
+      line-height: 52px;
+    }
+  }
+  .menu {
+    padding:0px 10px;
+    // margin-top: -2px;
+    line-height:48px;
+    // background: #3bb19c;
+    background: #000;
+  }
+}
+ 
+:global {
+  .ant-layout {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .ant-layout-header{
+    height: 54px;
+    line-height: 54px;
+  }
+  
+  .ant-menu-horizontal {
+    .ant-menu-submenu-selected{
+      border:none;
+    }
+  }
+  .ant-menu-horizontal > .ant-menu-item  {
+     border:none;
+  }
+  
+}
+
+.logo {
+  height: 54px;
+  line-height: 54px;
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+  font-size: 20px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    width: 160px;
+  }
+}
+
+i.trigger {
+  font-size: 20px;
+  line-height: 54px;
+  color:#eee;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  padding: 0 24px;
+  &:hover {
+    background: rgba(0,0,0,0.7);
+  }
+}
+
+.right {
+  float: right;
+  height: 100%;
+  .action {
+    cursor: pointer;
+    padding: 0 12px;
+    color:#fff;
+    display: inline-block;
+    transition: all 0.3s;
+    height: 100%;
+    > i {
+      font-size: 16px;
+      vertical-align: middle;
+      color: @text-color;
+    }
+    &:hover,
+    &:global(.ant-popover-open) {
+      background: rgba(0,0,0,0.1);
+    }
+  }
+  .search {
+    padding: 0;
+    margin: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: 10px 8px 10px 0;
+      color: @primary-color;
+      background: rgba(255, 255, 255, 0.458823529411765);
+      vertical-align: middle;
+    }
+    .name{
+      color:#fff;
+    }
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  .header {
+    :global(.ant-divider-vertical) {
+      vertical-align: unset;
+    }
+    .name {
+      display: none;
+    }
+    i.trigger {
+      padding: 0 12px;
+    }
+    .logo {
+      padding-right: 12px;
+      position: relative;
+    }
+    .right {
+      position: absolute;
+      right: 12px;
+      top: 0;
+      background: #fff;
+      .account {
+        .avatar {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

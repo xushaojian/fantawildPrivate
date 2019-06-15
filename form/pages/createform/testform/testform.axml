@@ -1,0 +1,3 @@
+<view>
+    <image src="/image/empty.png" mode="aspectFit" style="width:100%"/>
+</view>

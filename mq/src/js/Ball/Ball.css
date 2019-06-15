@@ -1,0 +1,4 @@
+.div-item{
+        overflow:scroll;
+        -webkit-overflow-scrolling: touch;
+}

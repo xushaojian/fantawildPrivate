@@ -1,0 +1,91 @@
+.container{
+    position: relative;
+    width: calc(100%);
+    min-Width: 1200px;
+    height: calc(100vh);
+    background-image: url(https://img.alicdn.com/tfs/TB1cpTewMHqK1RjSZFEXXcGMXXa-2872-1580.png);
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    .row {
+        display: flex;
+        align-items:center;
+        justify-Content: center;
+        flex: 1;
+        .formWrapper {
+            display: flex;
+            align-items: center;
+            justify-Content: center;
+            .form {
+              width: 400px;
+              height:400px;
+              padding: 40px;
+              background: #fff;
+              border-radius: 6px;
+              .title {
+                margin: 0 0 40px;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 28px;
+                font-weight: 500;
+                text-align: center;
+              }
+              .formItem {
+                position: relative;
+                margin-bottom: 20px;
+                .submitBtn {
+                  width: 100%;
+                }
+              }
+              .inputIcon {
+                position: absolute;
+                left: 10px;
+                top: 8px;
+                color: #666;
+              }
+              .inputCol{
+                width: 100%;
+                padding-left: 20px;
+              }
+            
+              .tips{
+                margin-top: 20px;
+                display: block;
+                text-align: center;
+              }
+              .qrcode{
+                width:100%;
+               
+              }
+              // .toggle{
+              //   background: url(../../images/erweima.png) no-repeat 0 0;
+              //   width: 60px;
+              //   height: 60px;
+              //   position: absolute;
+              //   bottom: 0;
+              //   right: 0;
+              //   cursor: pointer;
+              //   border-radius: 0 0 12px 0;
+              // }
+              .label{
+                width:100%;
+                .icon{
+                  width:30px;
+                  height:30px;
+                  vertical-align: center;
+                }
+                .text{
+                  margin-left: 30px;
+                  margin-right: 24px;
+                  padding-right: 24px;
+                  display: inline-block;
+                  font-size: 14px;
+                  text-align: left;
+                  line-height: 24px;
+                  border-right: 1px solid #1a1C1F21;
+                  vertical-align: center;
+                }
+              }
+            }
+          }
+    }
+}

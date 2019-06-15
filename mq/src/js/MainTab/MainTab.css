@@ -1,0 +1,12 @@
+.am-tabs-default-bar-tab {
+    height: 35px;
+    line-height: 35px;
+}
+
+/* 取消结果控件底线 */
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+    html:not([data-scale]) .am-result::after {
+      height: 0PX;
+    }
+  }
+  

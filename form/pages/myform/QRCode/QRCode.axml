@@ -1,0 +1,6 @@
+<view class="container">
+  <canvas
+    id="pie"
+    width="{{width}}" height="{{height}}"
+  />
+</view>

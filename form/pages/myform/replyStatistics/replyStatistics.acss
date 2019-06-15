@@ -1,0 +1,21 @@
+page{
+    background-color: #f4f4f4;
+}
+
+.card{
+    width: 100%;
+}
+
+.title{
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.canvas{
+    width: 300px;
+    margin:0 auto 
+}

@@ -1,0 +1,21 @@
+.error{
+  color: red;
+}
+
+.msg{
+  color: green;
+}
+
+.alert{
+  color:#ffa550;
+}
+
+.debug{
+  color: #DCDCDC;
+}
+
+.normal{
+  color:#108ee9;
+}
+
+

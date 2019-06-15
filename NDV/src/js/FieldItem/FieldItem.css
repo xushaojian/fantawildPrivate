@@ -1,0 +1,28 @@
+.am-list-item .am-list-line .am-list-content {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.field-normal{
+
+}
+
+.exp{
+    color:#FF0000;
+
+}
+
+.top{
+    border-top: 1px solid #CFCFCF
+}
+
+/* 取消结果控件底线 */
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+    html:not([data-scale]) .am-result::after {
+      height: 0PX;
+    }
+}
+ 
+ 
+  

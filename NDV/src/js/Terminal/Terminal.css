@@ -1,0 +1,17 @@
+.div-item {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+}
+
+.error {
+        font-size: 14px;
+        color: #4f4f4f;
+        text-align: left;
+        color:#FF0000
+}
+
+.normal {
+        font-size: 14px;
+        color: #4f4f4f;
+        text-align: left;
+}

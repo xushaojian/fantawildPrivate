@@ -1,0 +1,73 @@
+<view>
+
+  <view class="flex-container">
+    <view class="{{topTabClass1}}" onTap="choiceTopTab" data-index="create"> 我创建的 </view>
+    <view class="{{topTabClass2}}" onTap="choiceTopTab" data-index="join"> 相关我的 </view>
+  </view>
+
+  <view class="tab {{isShowCreateView}}">
+        <view a:if="{{listData.length ===0 }}"> 
+            <image src="/image/empty.png" mode="aspectFit" style="width:100%"/>
+        </view>
+        <view class="a-list">
+            <view class="a-list-items">
+                <block a:for={{listData}}>
+                    <view class="a-list-item" onTap="handleListItemTap" data-index={{index}} >
+                        <view class="a-list-item-line">
+                            <view class="img">
+                                <image class="a-list-item-thumb" src="{{item.avatar}}" mode="scaleToFill" />
+                                <view>{{item.sponsor}}</view>
+                            </view>
+                            <view class="a-list-item-content">
+                                <view class="title">{{item.title}}</view>
+                                <view style="color: #888;">{{item.stopReply +'  截止'}}</view>
+                            </view>
+                            <view  class="a-list-item-extra" >
+                                <image class="a-list-item-thumb" src="{{item.isFinish}}" mode="scaleToFill" />
+                                <view>{{item.responsesNum}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+  </view>
+
+    <view class="tab {{isShowJionView}}">
+        <view a:if="{{listDataMyJoin.length ===0 }}"> 
+            <image src="/image/empty.png" mode="aspectFit" style="width:100%"/>
+        </view>
+        <view class="a-list">
+            <view class="a-list-items">
+                <block a:for={{listDataMyJoin}}>
+                    <view class="a-list-item" onTap="handleListItemTapMyJoin" data-index={{index}} >
+                        <view class="a-list-item-line">
+                        <view class="img">
+                            <image class="a-list-item-thumb" src="{{item.avatar}}" mode="scaleToFill" />
+                            <view>{{item.sponsor}}</view>
+                        </view>
+                        <view class="a-list-item-content">
+                            <view class="title">{{item.title}}</view>
+                            <view style="color: #888;">{{item.stopReply +'  截止'}}</view>
+                        </view>
+                        <view  class="a-list-item-extra" >
+                            <image class="a-list-item-thumb" src="{{item.isFinish}}" mode="scaleToFill" />
+                            <view>{{item.responsesNum}}</view>
+                        </view>
+                    </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="windows" style="{{display:alert}}">
+            <view class="alert-title">重命名</view>
+            <input class="alert-input" onInput="inputNewFormName" placeholder="请输入新名称"/>
+            <view class="alert-button">
+                <button class="button-cancel" type="default" onTap="alertCancel">取消</button>
+                <button class="button-sure" type="primary" onTap="alertSure">确定</button>
+            </view>
+    </view>
+
+</view>

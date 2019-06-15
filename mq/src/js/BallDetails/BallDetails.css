@@ -1,0 +1,38 @@
+.div-content {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag-container>div {
+  margin-left: 9px;
+  margin-bottom: 9px;
+}
+
+.am-list-item .am-list-line .am-list-brief {
+  color: #4F4F4F;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 2px;
+  width: 100%;
+  overflow: visible;
+  -o-text-overflow: no;
+  text-overflow: none;
+  white-space: break-word;
+}
+
+.my-radio .am-radio {
+  padding: 2.5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.am-button-small {
+  padding: 0 8px;
+}

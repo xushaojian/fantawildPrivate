@@ -1,0 +1,24 @@
+.my-list .spe .am-list-extra {
+    flex-basis: initial;
+  }
+
+  .am-list-item .am-list-line-multiple {
+    padding: 5px 15px 5px 0;
+}
+
+.exp-field{
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.spe {
+  width: 60px;
+  height: 60px;
+}
+
+/* 取消结果控件底线 */
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  html:not([data-scale]) .am-result::after {
+    height: 0PX;
+  }
+}

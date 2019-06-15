@@ -1,0 +1,36 @@
+/* @import '~saltui/build/salt-ui.css'; */
+
+.am-tabs-default-bar-tab {
+    height: 35px;
+    line-height: 35px;
+}
+
+.btn-container {
+    width: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color:#F8F8FF;
+}
+
+.am-badge-dot {
+    top: 5px;
+    right: 0px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: red;
+}
+
+/* 取消结果控件底线 */
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 2dppx) {
+    html:not([data-scale]) .am-result::after {
+        height: 0PX;
+    }
+}
+
+.spe {
+    width: 60px;
+    height: 60px;
+}

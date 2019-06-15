@@ -1,0 +1,36 @@
+.reply{
+    position: absolute;
+    background-color: #EDEDED;
+}
+
+.box{
+    display: flex;
+    flex-direction:column;
+    background-color: white;
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+}
+
+.title{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    vertical-align: middle;
+    border-bottom: 1px solid gray;
+    color: #ffa550;
+}
+
+.row{
+    display: flex;
+    flex-direction:row;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.col{
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

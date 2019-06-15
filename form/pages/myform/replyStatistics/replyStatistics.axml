@@ -1,0 +1,4 @@
+<view a:for="{{chartData}}" class="card">
+    <view class="title">{{item.title}}</view>
+    <view class="canvas"><canvas id="canvas{{item.id}}" /></view>
+</view>

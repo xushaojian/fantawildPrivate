@@ -1,0 +1,42 @@
+    
+<view class="page">    
+
+    <view class="page-section">
+        <view class="page-section-title"> 是否匿名 </view>
+        <view class="page-section-demo">
+            <switch checked="{{isAnonymous ? true : false}}"  onChange="isAnonymous"/>
+        </view>
+    </view>
+
+    <!-- <view class="page-section">
+        <view class="page-section-title"> 钉钉提醒 </view>
+        <view class="page-section-demo">
+            <switch checked="{{ddReminde ? true : false}}"  onChange="ddReminde"/>
+        </view>
+    </view> -->
+
+    <view class="page-section">
+        <view class="page-section-title"> {{join.selectedCount? "填写用户范围,已选择" + join.selectedCount + "人": "填写用户范围"}}</view>
+        <view class="page-section-demo">
+            <button size="mini" type="{{ isjoin ? 'default' : 'primary' }}" onTap="join" data-limit="no" > 不限 </button>
+            <button style="margin-left: 10px;" size="mini"  type="{{ isjoin ? 'primary' : 'default' }}" onTap="join" data-limit="yes" > 成员 </button>
+        </view>
+    </view>
+
+    <view class="page-section">
+        <view class="page-section-title"> {{ resultOpenRange.selectedCount ? "数据公开范围,已选择" + resultOpenRange.selectedCount + "人" : "数据公开范围(不公开=仅创建人可见)" }}</view>
+        <view class="page-section-demo">
+            <button size="mini" type="{{ isopen ? 'default' : 'primary' }}" onTap="range" data-open="no"> 不公开 </button>
+            <button style="margin-left: 10px;" type="{{ isopen  ? 'primary' : 'default' }}" size="mini" onTap="range" data-open="yes"> 成员 </button>
+        </view>
+    </view>
+
+    <view class="page-section">
+        <view class="page-section-title"> 截止回复时间 </view>
+        <view class="page-section-demo">
+            <button size="mini" type="primary" onTap="date"> {{stopReply}} </button>
+        </view>
+    </view>
+
+    <button type="primary" onTap="sure">确定</button>
+</view>

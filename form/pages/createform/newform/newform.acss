@@ -1,0 +1,166 @@
+page{
+    background-image:url(/image/bc.jpg);
+}
+
+.content {
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.view-border {
+    border: 4rpx solid #FFA550;
+    /* box-shadow: 5rpx 5rpx 5rpx 5rpx #888888; */
+}
+
+.tool {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E6E6FA;
+}
+
+.tool>view {
+    height: 64rpx;
+    line-height: 64rpx;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFA550;
+}
+
+.page-section-btns-my {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #108ee9;
+    font-size: 26rpx;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.page-section-btns-my>view {
+    flex: 1;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.title-class {
+    width: 100%;
+    font-size: 18px;
+    color: #8B2500;
+    margin-top: 20rpx;
+}
+
+.postion-left {
+    text-align: left;
+}
+
+.postion-center {
+    text-align: center;
+}
+
+.postion-right {
+    text-align: right;
+}
+
+.margin-top20 {
+    margin-top: 30rpx;
+}
+
+.description {
+    font-size: 14px;
+    color: #F2F2F2;
+    line-height: 22px;
+    margin: 10px 0px 10px 0px;
+    text-align: justify;
+}
+
+.group{
+    margin-left: 10px;
+}
+
+.radio {
+    display: block;
+    margin-bottom: 20rpx;
+    color: #fff;
+}
+
+.radio-text {
+    line-height: 1.8;
+}
+
+.windows {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #108ee9;
+    animation: componentAnim 0.5s;
+    border-radius: 24rpx 24rpx 0 0;
+}
+
+.close-button {
+    float: right;
+    height: 48rpx;
+    width: 48rpx;
+}
+
+.container {
+    padding-top: 20rpx;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 16%;
+    text-align: center;
+    padding-top: 16%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.grid-item-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-icon {
+    width: 72rpx;
+    height: 72px;
+}
+
+.grid-text {
+    color: #fff;
+    font-size: 26rpx;
+    margin-top: 8rpx;
+}
+
+@keyframes componentAnim {
+    0% {
+        bottom: -400px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}

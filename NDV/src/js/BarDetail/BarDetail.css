@@ -1,0 +1,16 @@
+.am-modal-body {
+    font-size: 16px;
+    color: #000;
+    height: 100%;
+    line-height: 1.6;
+    overflow: auto;
+}
+
+.title{
+    font-size: 17px;
+    color: #FFA550;
+}
+
+.am-modal-transparent .am-modal-content {
+    padding-top: 3px;
+}
