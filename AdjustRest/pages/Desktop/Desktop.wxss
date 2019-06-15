@@ -1,0 +1,26 @@
+.flex-wrp{  
+    height: 40px;  
+    display: flex;  
+}  
+
+.flex-item{  
+    width: auto;  
+    height: 40px;  
+    color: #ffffff;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+
+.page,
+.page__bd{
+    height: auto;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 0px;
+    
+}
+

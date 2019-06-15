@@ -1,0 +1,22 @@
+<view class="page__hd">
+    <view class="page__title">
+        <image mode="aspectFill" class="barChart" src="../Icon/bar_chart_19.389830508475px_1160323_easyicon.net.png"></image>
+        部门加班调休报表({{yearType}})</view>
+    <view class="page__desc">单位:小时</view>
+</view>
+
+<view>
+    <canvas canvas-id="AddWork" class="canvas"> </canvas>
+</view>
+
+<view class="buttonGorp">
+    <button class="weui-btn mini-btn" type="primary" disabled="{{thisyear}}" size="mini" class="top10px" bindtap="thisyear">今年</button>
+
+    <button class="weui-btn mini-btn" type="primary" disabled="{{lastyear}}" size="mini" class="top10px" bindtap="lastyear">去年</button>
+
+    <button class="weui-btn mini-btn" type="primary" size="mini" disabled="{{column}}" class="top10px" bindtap="column">条形图</button>
+
+    <button class="weui-btn mini-btn" type="primary" disabled="{{line}}" size="mini" class="top10px" bindtap="line">折线图</button>
+
+
+</view>

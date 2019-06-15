@@ -1,0 +1,5 @@
+<view class="flex-wrp" style="flex-direction:row"> 
+     <view class="flex-item-1 bc_green"></view> 
+     <view class="flex-item-2 bc_red"></view> 
+     <view class="flex-item-3 bc_blue"></view> 
+</view>

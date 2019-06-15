@@ -1,0 +1,5 @@
+  
+<view class="contain">  
+个人中心  
+<text class="iconfont icon-wode" style="font-size:50px;color:red"></text>  
+</view> 

@@ -1,0 +1,34 @@
+.flex-wrp{
+  height:100px;
+  display: flex;
+  background-color: #FFFFFF;
+  }
+
+  .flex-item-1{
+    width: 100px;
+    height: 100px;
+  }
+    .flex-item-2{
+    width: 100px;
+    height: 100px;
+  }
+    .flex-item-3{
+    width: 175px;
+    height: 100px;
+  }
+
+  .bc_green{
+     background-color: #09BB07;
+}
+.bc_red{
+     background-color: #F76260;
+}
+.bc_blue{
+     background-color: #10AEFF;
+}
+.bc_yellow{
+     background-color: #FFBE00;
+}
+.bc_gray{
+     background-color: #C9C9C9;
+}

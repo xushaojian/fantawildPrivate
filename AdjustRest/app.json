@@ -1,0 +1,32 @@
+
+{
+  "pages": [
+    "pages/Login/Login",
+    "pages/My/my",
+    "pages/OverTimeChart/OverTimeChart",
+    "pages/AdjustRestReport/AdjustRestReport",
+    "pages/OverTimeManage/OverTimeManage",
+    "pages/Desktop/Desktop",
+    "pages/AdjustRestManage/AdjustRestManage",
+    "pages/AnnualLeaveManage/AnnualLeaveManage",
+    "pages/PerformanceManage/PerformanceManage",
+    "pages/PerformanceReport/PerformanceReport",
+    "pages/LevelAddOverTime/LevelAddOverTime",
+    "pages/LateAddLeaveEarly/LateAddLeaveEarly",
+    "pages/Help/Help"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "研究院调休系统",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

@@ -1,0 +1,20 @@
+.barChart {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0px;
+}
+
+.canvas {
+    height: 350px;
+    width: 100%;
+    border: 0px solid #000;
+}
+
+.buttonGorp {
+    display: flex;
+    flex-flow: row;  
+}
+
+.top10px{
+  margin-top:10px;
+}
