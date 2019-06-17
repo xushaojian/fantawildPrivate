@@ -48,7 +48,6 @@ module.exports = function SocketModule (sio,socket) {
     socket.on('disconnect', () => {
         if (addedUser) {
             --numUsers;
-    
             // 此客户端已离开的全局回显
             socket.broadcast.emit('user left', {
                 username: socket.username,
