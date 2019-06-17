@@ -1,104 +1,222 @@
-# 4-1api
-## 基于Express框架（mvc）的api接口框架
-## vscode调试 launch.json源码说明
+# markdown文件的基本常用编写语法 h1
+## markdown文件的基本常用编写语法 h2
+### markdown文件的基本常用编写语法 h3
+#### markdown文件的基本常用编写语法 h4
+##### markdown文件的基本常用编写语法 h5
+###### markdown文件的基本常用编写语法 h6
+
+## 无序列表
+* 1
+* 1
+* 1
+
+- 2
+- 2
+- 2
+
++ 3
++ 3
++ 3
+
+## 有序列表
+1. 第一行
+2. 第二行
+3. 第三行
+
+## 区块引用
+>比如说，你想对某个部分做的内容做一些说明或者引用某某的话等
+撒旦发射点六分十六大哥上单四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送四道口附近上空点击发送
+
+## 华丽的分割线
+>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以
+
+***
+---
+_ _ _
+ 
+## 链接
+>支持2种链接方式：行内式和参数式，不管是哪一种，链接文字都是用 [方括号] 来标记。
+
+行内式 [fantawild](https://fantawild.com)
+
+## 图片
+![这是图片](https://www.cnblogs.com/images/logo_small.gif)
+
+## 代码框
+`<div>123456789</div>`
+
 ```
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "4-1api",
-            //启动文件
-            "program": "${workspaceFolder}/4-1api/app.js",
-            //设置环境变量
-            "env": {
-                "NODE_ENV":"development"
-            },
-            //项目根目录
-            "cwd": "${workspaceFolder}/4-1api/"
-        },
-    ]
+<div>123456789</div>
+<div>123456789</div>
+<div>123456789</div>
+```
+
+## 表格
+| name | age | sex |
+|:------:|:------:|:------:|
+|tony|20|男|
+|lucy|20|女|
+
+## 强调
+*字体倾斜*
+
+_字体倾斜_
+
+**字体加粗**
+
+__字体加粗__
+
+## 删除线
+~~请删除我吧~~
+
+*********
+# express 笔记
+> 如果当前的中间件功能没有结束请求响应周期，则必须调用next()将控制传递给下一个中间件函数。否则，请求将被搁置。(常见情景：服务器手动回车后才能接收下一个请求)
+
+> 中间件是在管道中执行的。你可以想象一个送水的真实管道。水从一端泵入，然后在到达目的地之前还会经过各种仪表与阀门。
+   这个比喻很重要的一部分就是顺序问题，你把压力表放在阀门之前和之后效果是不同的。
+
+> 在管道最后面我们会放一个来处理和前面任何路由都不匹配的请求。也就是错误处理中间件一般返回状态吗404.
+
+> 可以把一个中间件理解为一个处理函数（从请求产生响应），通过app.use(<中间件名称>)方法将中间件添加到一个列表中。
+  当HTTP请求到达时，Express会依次调用队列中的中间件，它们的功能便会依次执行，直到某个中间件返回了HTTP响应为止。
+
+> Request 对象 - request 对象表示 HTTP 请求，包含了请求查询字符串，参数，内容，HTTP 头部等属性。常见属性有：
+
+* req.app：当callback为外部文件时，用req.app访问express的实例
+* req.baseUrl：获取路由当前安装的URL路径
+* req.body / req.cookies：获得「请求主体」/ Cookies
+* req.fresh / req.stale：判断请求是否还「新鲜」
+* req.hostname / req.ip：获取主机名和IP地址
+* req.originalUrl：获取原始请求URL
+* req.params：获取路由的parameters
+* req.path：获取请求路径
+* req.protocol：获取协议类型
+* req.query：获取URL的查询参数串
+* req.route：获取当前匹配的路由
+* req.subdomains：获取子域名
+* req.accepts()：检查可接受的请求的文档类型
+* req.acceptsCharsets / req.acceptsEncodings / req.acceptsLanguages：返回指定字符集的第一个可接受字符编码
+* req.get()：获取指定的HTTP请求头
+* req.is()：判断请求头Content-Type的MIME类型
+* Response 对象 - response 对象表示 HTTP 响应，即在接收到请求时向客户端发送的 HTTP 响应数据。常见属性有：
+
+* res.app：同req.app一样
+* res.append()：追加指定HTTP头
+* res.set()在res.append()后将重置之前设置的头
+* res.cookie(name，value [，option])：设置Cookie
+* opition: domain / expires / httpOnly / maxAge / path / secure / signed
+* res.clearCookie()：清除Cookie
+* res.download()：传送指定路径的文件
+* res.get()：返回指定的HTTP头
+* res.json()：传送JSON响应
+* res.jsonp()：传送JSONP响应
+* res.location()：只设置响应的Location HTTP头，不设置状态码或者close response
+* res.redirect()：设置响应的Location HTTP头，并且设置状态码302
+* res.render(view,[locals],callback)：渲染一个view，同时向callback传递渲染后的字符串，如果在渲染过程中有错误发生next(err)将会被自动调用。callback将会被传入一个可能发生的错误以及渲染后的页面，这样就不会自动输出了。
+* res.send()：传送HTTP响应
+* res.sendFile(path [，options] [，fn])：传送指定路径的文件 -会自动根据文件extension设定Content-Type
+* res.set()：设置HTTP头，传入object可以一次设置多个头
+* res.status()：设置HTTP状态码
+* res.type()：设置Content-Type的MIME类型
+
+
+# 编程规范：
+1. 使用单引号
+2. 大括号位置
+```
+if (true) {
+    console.log('winning');
+}
+```
+3. 函数名，变量名 采用小驼峰命名法 ：adminUser
+4. 类名采用大驼峰命名法 ：AdminUser
+5.  常量命名 ：单词的所有字母都大写，并用下划线分割 PINK_COLOR
+6. 尽早的从函数中返回
+```
+    function isPercentage(val) {
+    if (val < 0) {
+        return false;
+    }
+    if (val > 100) {
+        return false;
+    }
+    return true;
 }
 ```
 
-## 需要全局安装的包
+7. 异步回调函数的第一个参数应该是错误指示
+8. 类继承
 ```
-进程管理,配置看 pm2.json
-npm install -g pm2
-
-代码规范检查 配置看 .eslintrc.json
-npm install -g eslint
-
-api文档自动生成 配置看 jsdoc.json
-npm install -g jsdoc
-执行 jsdoc -c jsdoc.json --debug --recurse
-
-打包node程序成exe(可能会用到)
-npm install -g pkg
+function Socket(options) {
+    // ...
+    stream.Stream.call(this);
+    // ...
+}
+util.inherits(Socket, stream.Stream);
 ```
-## eslint校验规则
-* 基于百度js规范和eslint最佳实践的nodejs开发规范 https://www.npmjs.com/package/eslint-config-fornode
 
-* "off"或者0，不启用这个规则
-* "warn"或者1，出现问题会有警告
-* "error"或者2，出现问题会报错
-* "camelcase": "error" 强制驼峰法命名
-* "no-console": "off" 禁用 console
-* "no-unused-vars": 2 禁止出现未使用过的变量
-* "no-use-before-define": 2 不允许在变量定义之前使用它们
-* "linebreak-style": [2, "unix"] 强制使用一致的换行风格
-* "quotes": ["error", "single"] 强制使用一致的单引号
-* "semi": ["error", "always"] 控制行尾部分号
-* "curly": ["error", "all"] 强制所有控制语句使用一致的括号风格
-* "global-require": "error" 要求 require() 出现在顶层模块作用域中
-* "lines-around-comment": ["error", { "beforeBlockComment": true }] 要求在注释周围有空行 ( 要求在块级注释之前有一空行)
-* "newline-after-var": ["error", "always"] 要求或禁止 var 声明语句后有一行空行
-* "newline-before-return": "error" 要求 return 语句之前有一空行
-* "new-cap": ["error", { "newIsCap": true, "capIsNew": false}] 构造函数首字母大写
-* "no-multiple-empty-lines": ["error", {"max": 2}] 空行不能够超过2行
-* "max-params": [1, 3] function 定义中最多允许的参数数量
-* "prefer-template": "error", // 使用模板而非字符串连接
-
-## jsdoc文档
-* https://www.html.cn/doc/jsdoc/about-configuring-jsdoc.html
-
-## pm2的使用
+9. 注解规范
+一般情况下，我们会对每个方法编写注释，这里采用dox的推荐注释，示例如下：
 ```
-参考文档:
-http://pm2.keymetrics.io/docs/usage/startup/
-https://www.cnblogs.com/luxiaoyao/p/9591009.html
-
-(1)	就4-1api使用流程
-        全局安装pm2 :  npm  install  pm2  –g
-	全局安装(windows兼容启动脚本) : npm install pm2-windows-startup  –g
-	CMD进入到 4-1api 目录
-	执行pm2-startup  install;
-	执行pm2  kill;
-	执行pm2 start pm2.json
-	执行pm2  save
-
-上述步骤实现含义: 
-	当www.js发生变更时,服务自动重启
-	开启一个进程服务,进程数量可选(最大等于cpu核数,负载均衡)
-	设置服务名称为DDNodeJsServer
-	开机自动启动服务
-	CMD窗口可全部关闭,也可以重新调出查看日志
-
-(2)	pm2 常用指令
-	pm2  logs  : 查看程序运行日志
-	pm2  list  : 列出所有进程/应用
-	pm2  restart  app.js : 重启  pm2 reload
-	pm2  stop  app_name|app_id
-	pm2  stop  all : 停止所有应用
-	pm2  start  app.js  --watch : 监听app.js文件,发生变更时自动重启服务
-	pm2  start  app.js  -i 3 : 开启三个进程(负载均衡)
-	pm2  start  app.js  -i max : 根据CPU核数,开启对应数目的进程(负载均衡)
-	pm2  --help : 查看帮助
-	PM2  pid : 查看进程id
-	pm2 delete www : 删除进程/应用
-	重新启动所有进程/应用        pm2 restart all
-	查看进程/应用的资源消耗情况       pm2 monit
-	查看某个进程/应用具体情况      pm2 describe www
-	删除所有进程/应用            pm2 delete all
+/**
+* Queries some records
+* Examples:
+* ```
+* query('SELECT * FROM table', function (err, data) {
+* // some code
+* });
+* ```
+* @param {String} sql Queries
+* @param {Function} callback Callback
+*/
+exports.query = function (sql, callback) {
+    // ...
+};
 ```
+
+10. dox的注释规范源自于JSDoc。可以通过注释生成对应的API文档。
+
+
+# 常见http错误
+* 400 Invalid syntax. 语法问题
+* 404 Object not found. 对象没有找到
+* 500 Internal server error. 服务器内部错误
+
+## 强制https
+```
+// force https
+app.use((ctx, next) => {
+    if(ctx.protocol == 'http') {
+        ctx.redirect(ctx.href.replace('http', 'https'))
+    } else {
+        return next()
+    }
+})
+```
+
+## log4js解释
+
+* "type": "dateFile"   // 可以设置成 console、file、dateFile三种
+* "filename": "./logs/access-", // 设置log输出的文件路劲和文件名
+* "pattern": ".yyyy-MM-dd.log",
+* "alwaysIncludePattern": true, // 和上面同时使用 设置每天生成log名
+* "encoding": "utf-8", // 设置文件编码格式
+* "maxLogSize ": 31457280 // 设置文件大小
+* "level": "debug", // 设置log输出的最低级别
+* "maxLevel": "error" // 设置log输出的最高级别 
+* // log级别为8级 ALL<TRACE<DEBUG<INFO<WARN<ERROR<FATAL<MARK<OFF。默认级别是 OFF
+
+* logger.debug("this is debug");//等级最低
+* logger.trace("this is trace");
+* logger.info("this is info");
+* logger.warn("this is warn");
+* logger.error("this is error");
+* logger.fatal("this is fatal");//等级最高
+
+
+console.log(process.env.NODE_ENV)
+
+
+
+
