@@ -10,6 +10,6 @@ const sc = new StatusController();
 * 参数 : parkName
 * 传入公园名称 --> 获取公园下的所有项目 --> 不同的项目使用不同的逻辑分析
 */
-router.get('/getProjectStatus', sc.getProjectStatus);
-router.get('/getDriveStatus', sc.getDriveStatus);
+router.get('/getProjectStatus', sc.getAllProjectStatus);
+router.get('/getDriveStatus', sc.getAllDriveStatus);
 module.exports = router;

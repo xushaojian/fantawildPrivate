@@ -4,20 +4,16 @@ export default {
 	namespace: 'driveStatus',
 
 	state: {
-		data: [] 
+		myResult: {}
 	},
 
 	effects: {
-
 		*getDriveStatus(_, { call, put }) {
 			const result = yield call(service.getDriveStatus);
-			console.log('请求结果');
-			console.log(result);
-		
 			yield put({
 				type: 'save',
 				payload: {
-					reqData: result.data
+					reqData: result
 				}
 			});
 		}
@@ -25,7 +21,7 @@ export default {
 
 	reducers: {
 		save(state, { payload: { reqData } }) {
-			return { ...state, data: reqData  };
+			return { ...state, myResult: reqData };
 		},
 	},
 }
