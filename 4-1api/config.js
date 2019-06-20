@@ -27,7 +27,7 @@ var CONFIG = {
 
     //生产环境
     PRODUCTION: {
-        HOST: '10.159.10.143',
+        HOST: '127.0.0.1',
         PORT: 8888,
         DB: {
             user: 'analysis',
