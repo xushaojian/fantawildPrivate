@@ -12,7 +12,7 @@ Page({
         title: '空白表单',
         page: '/pages/createform/newform/newform',
       }, {
-        icon: '/image/tongyong.png',
+        icon: '/image/tongyong.jpg',
         title: '团建投票',
         page: '/pages/createform/testform/testform',
       }, {

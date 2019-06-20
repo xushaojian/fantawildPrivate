@@ -1,15 +1,14 @@
 page{
-    background-image:url(/image/bc.jpg);
-}
-
-.content {
-    padding-left: 20rpx;
-    padding-right: 20rpx;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(top ,skyblue, skyblue, #108ee9);
 }
 
 .view-border {
-    border: 4rpx solid #FFA550;
-    /* box-shadow: 5rpx 5rpx 5rpx 5rpx #888888; */
+    background-color: #fff;
+    border-top: 4rpx solid #FFA550;
+    border-bottom: 4rpx solid #FFA550;
+    box-shadow: 5px 10px 5px #888888;
 }
 
 .tool {
@@ -17,6 +16,7 @@ page{
     justify-content: space-around;
     align-items: center;
     background-color: #E6E6FA;
+    
 }
 
 .tool>view {
@@ -24,7 +24,8 @@ page{
     line-height: 64rpx;
     vertical-align: middle;
     text-align: center;
-    color: #FFA550;
+    color: #000;
+    
 }
 
 .page-section-btns-my {
@@ -54,11 +55,11 @@ page{
     color: white;
 }
 
-.title-class {
+.title {
     width: 100%;
-    font-size: 18px;
-    color: #8B2500;
-    margin-top: 20rpx;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
 }
 
 .postion-left {
@@ -78,11 +79,12 @@ page{
 }
 
 .description {
-    font-size: 14px;
-    color: #F2F2F2;
+    font-size: 16px;
+    color: #000;
     line-height: 22px;
-    margin: 10px 0px 10px 0px;
+    padding: 0px 20px 0px 20px;
     text-align: justify;
+
 }
 
 .group{

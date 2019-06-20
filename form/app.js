@@ -50,9 +50,9 @@ App({
     components: [{
         id: new Date().getTime(),
         type: "title",
-        title: "This is a title",
-        position: "center",
-        description: "This is a description.",
+        title: "问卷标题",
+        position: "left",
+        description: "",
         border: "view-border"
     }],
 

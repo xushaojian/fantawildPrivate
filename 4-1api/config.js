@@ -10,17 +10,8 @@ var CONFIG = {
             server: '70YA1G4TYULFOD0',
             port: 11433,
             database: 'test',
-            stream: false,
-            connectionTimeout: 15000,
-            equestTimeout: 15000,
-            parseJSON: true,
             options: {
                 encrypt: false
-            },
-            pool: {
-                min: 5,
-                max: 200,
-                idleTimeoutMillis: 30000
             }
         }
     },
@@ -35,17 +26,8 @@ var CONFIG = {
             server: '10.159.10.183',
             port: 1433,
             database: 'test',
-            stream: false,
-            connectionTimeout: 15000,
-            equestTimeout: 15000,
-            parseJSON: true,
             options: {
                 encrypt: false
-            },
-            pool: {
-                min: 5,
-                max: 200,
-                idleTimeoutMillis: 30000
             }
         }
     }

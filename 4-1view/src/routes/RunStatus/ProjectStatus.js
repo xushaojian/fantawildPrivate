@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'antd';
+import { Card, Button, Affix } from 'antd';
 import { connect } from 'dva';
 
 import CardView from './CardView';
@@ -17,7 +17,7 @@ const tabList = [
 ];
 
 @connect(({ projectStatus, loading }) => ({
-  data: projectStatus.data,
+  myResult: projectStatus.myResult,
   loading: loading.models.projectStatus
 }))
 
@@ -31,6 +31,22 @@ export default class ProjectStatus extends React.Component {
     this.props.dispatch({
       type: 'projectStatus/getProjectStatus',
     })
+    
+    this.timerID = setInterval(
+      () => this.myRefresh(),
+      30000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID)
+  }
+
+  myRefresh = () => {
+    console.log('myRefresh')
+    this.props.dispatch({
+      type: 'projectStatus/getProjectStatus',
+    })
   }
 
   onTabChange = (key) => {
@@ -40,21 +56,26 @@ export default class ProjectStatus extends React.Component {
   };
 
   render() {
-    console.log('peojectStatus - this.props.data');
-    console.log(this.props.data);
+    
     let that = this;
     return (
-      
+
       <div>
         <Card
           style={{ width: '100%' }}
           tabList={tabList}
           activeTabKey={this.state.cardKey}
+          extra={
+            <Affix style={{ position: 'absolute', top: 33, right: 30 }} >
+              <Button type="primary" shape="circle" icon="reload" size={30}  onClick={() => this.myRefresh()}/>
+              每30秒自动刷新
+            </Affix>
+          }
           onTabChange={key => {
             this.onTabChange(key);
           }}
         >
-          {that.state.cardKey == 'card' ? <CardView data = {that.props.data} /> : <PicView />}
+          {that.state.cardKey == 'card' ? <CardView data={that.props.myResult.data} /> : <PicView />}
         </Card>
       </div>
     );

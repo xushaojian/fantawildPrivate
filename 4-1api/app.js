@@ -14,7 +14,7 @@ var mySocket = require('./socket');
 var PORT;
 var HOST;
 
-//process是node的全局变量
+//process是node的内置全局变量
 if (process.env.NODE_ENV === 'development') {
     PORT = CONFIG.DEVELOPMENT.PORT;
     HOST = CONFIG.DEVELOPMENT.HOST;

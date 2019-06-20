@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "?start": "set NODE_ENV=development&& node ./app",
     "start": "set NODE_ENV=production&& node ./app",
     "pm2": "pm2 start ./pm2.json",
     "jsdoc": "jsdoc -c jsdoc.json --debug --recurse"
